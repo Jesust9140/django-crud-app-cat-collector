@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h1>All Cats</h1>
+<ul>
+  {% for cat in cats %}
+  <li>{{ cat.name }}</li>
+  {% empty %}
+  <li>No cats found.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
